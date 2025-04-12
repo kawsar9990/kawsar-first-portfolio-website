@@ -44,3 +44,63 @@ export function darkmode() {
     });
 }
 // dark mode switcher 
+
+
+
+
+
+
+// text Animation
+export function textanimation(){
+    var typed = new Typed("#text_animation", {
+        strings: ["Developer.", "Marketer.", "Designer.", "Freelancer."],
+        typeSpeed: 50,
+        backSpeed: 30,
+        loop: true
+      });
+};
+// text Animation
+
+
+
+
+
+
+// loading effect 
+export function loadingEffect(){
+    let loaders = document.querySelector('.loader')
+    window.addEventListener('load', () => {
+        loaders.style.display = 'none';
+    })
+}
+// loading effect 
+
+
+
+
+// scroll nav bar 
+export function navBar(){
+    window.addEventListener('scroll', () => {
+        let navbar = document.querySelector('.heading')
+        navbar.classList.toggle('sticky', window.scrollY > 0)
+    })
+}
+// scroll nav bar 
+
+
+
+
+// notifaction title 
+export function notifactiontitle(){
+    function notifaction(){
+        let istitle = document.title;
+        let isflash = false;
+        function isnotifaction(){
+            document.title = isflash ?   istitle : "(99) New Notifaction"
+            isflash = !isflash;
+        }
+        setInterval(isnotifaction, 1000)
+    }
+    window.onload =  notifaction ;
+}
+// notifaction title 
